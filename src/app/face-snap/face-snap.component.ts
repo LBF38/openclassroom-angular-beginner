@@ -11,6 +11,8 @@ export class FaceSnapComponent implements OnInit {
   createdDate!: Date;
   snaps!: number;
   imageUrl!: string;
+  snapClick: boolean = false;
+  snapTitle:string="Oh Snap!";
 
   ngOnInit() {
     this.title = 'FaceSnap';
@@ -21,6 +23,22 @@ export class FaceSnapComponent implements OnInit {
   }
 
   onAddSnap() {
+    this.snapClick = true;
     this.snaps++;
+    this.snapTitle='Oops, unSnap!';
+  }
+
+  onRemoveSnap() {
+    this.snapClick = false;
+    this.snaps--;
+    this.snapTitle='Oh Snap!';
+  }
+
+  onSnap() {
+    if (this.snapClick) {
+      this.onRemoveSnap();
+    } else {
+      this.onAddSnap();
+    }
   }
 }
