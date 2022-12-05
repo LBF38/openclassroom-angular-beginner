@@ -12,22 +12,29 @@ export class AppComponent implements OnInit {
   myLastSnap!: FaceSnap;
 
   ngOnInit() {
-    this.mySnap = new FaceSnap('FaceSnap',
-      'A social media app for sharing photos',
-      new Date(),
-      0,
-      'https://www.w3schools.com/w3images/avatar2.png');
-
-    this.myOtherSnap = new FaceSnap('FaceSnap',
-      "This is a second FaceSnap",
-      new Date(),
-      0,
-      'https://picsum.photos/200/300');
-    this.myLastSnap = new FaceSnap('FaceSnap',
-      "Another FaceSnap",
-      new Date(),
-      5,
-      'https://picsum.photos/200/300?grayscale');
+    this.mySnap = {
+      title: 'FaceSnap',
+      description: 'A social media app for sharing photos',
+      createdDate: new Date(),
+      snaps: 0,
+      imageUrl: 'https://www.w3schools.com/w3images/avatar2.png',
+      location: 'New York'
+    };
+    this.myOtherSnap = {
+      title: 'FaceSnap',
+      description: "This is a second FaceSnap",
+      createdDate: new Date(),
+      snaps: 0,
+      imageUrl: 'https://picsum.photos/200/300',
+      location: "La montagne"
+    };
+    this.myLastSnap = {
+      title: 'FaceSnap',
+      description: "Another FaceSnap",
+      createdDate: new Date(),
+      snaps: 5,
+      imageUrl: 'https://picsum.photos/200/300?grayscale'
+    };
   }
 
 }
