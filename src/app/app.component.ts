@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
         title: 'FaceSnap',
         description: 'A social media app for sharing photos',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 3500,
         imageUrl: 'https://www.w3schools.com/w3images/avatar2.png',
         location: 'New York'
       },
